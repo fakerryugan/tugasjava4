@@ -40,6 +40,6 @@ const pelanggan1 = new Pelanggan("legis", "083423523562");
 const pelanggan2 = new Pelanggan("fatim", "089742812312");
 sistem.tambahPelanggan(pelanggan1);
 sistem.tambahPelanggan(pelanggan2);
-pelanggan2.pilihKendaraan("Mobil Avanza");
 sistem.tampilkanPelanggan();
+pelanggan2.pilihKendaraan("Mobil Avanza");
 sistem.tampilkanYangSudahSewa();
