@@ -24,6 +24,16 @@ class Tranpotasi{
         console.log(`${i+1}.nama:${p.nama} telp: ${p.nomorTelepon}`);
     }
   }
+  tampilkanYangSudahSewa() {
+        console.log("\n=== Daftar Pelanggan yang sudah sewa ===");
+        let penyewa = this.databasepelanggan.filter(p => p.kendaraanDisewa !== null);
+        if (penyewa.length === 0) {
+            console.log("Belum ada pelanggan yang menyewa kendaraan.");
+        } else {
+            penyewa.forEach((p, i) => {
+                console.log(`${i + 1}. Nama: ${p.nama} | Kendaraan: ${p.kendaraanDisewa}`);
+            });
+        }}
 }
 const sistem = new Tranpotasi();
 const pelanggan1 = new Pelanggan("legis", "083423523562");
@@ -32,3 +42,4 @@ sistem.tambahPelanggan(pelanggan1);
 sistem.tambahPelanggan(pelanggan2);
 pelanggan2.pilihKendaraan("Mobil Avanza");
 sistem.tampilkanPelanggan();
+sistem.tampilkanYangSudahSewa();
